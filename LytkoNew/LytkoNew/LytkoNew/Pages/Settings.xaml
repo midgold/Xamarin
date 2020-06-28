@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LytkoNew.Pages.Settings">
+    <Frame BackgroundColor="#282828" CornerRadius="0" Padding="0">
+        <Frame BackgroundColor="#2f2f2f" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+           CornerRadius="8" HasShadow="True"  Margin="8" Padding="0">
+            <StackLayout VerticalOptions="Fill">
+                <Label Text="Settings" TextColor="White" FontSize="30" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"  Margin="0,20"/>
+
+                <StackLayout Orientation="Horizontal" Margin="15,15,0,0" HorizontalOptions="Fill">
+                    <Image Source="wifi.png" 
+                           HeightRequest="{OnPlatform iOS=40, Android=28}"
+                           WidthRequest="{OnPlatform iOS=40, Android=40}" Margin="0,0,25,0"/>
+                    <Label Text="Wi-Fi" TextColor="White" FontSize="18" VerticalTextAlignment="Center" VerticalOptions="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="WifiOpen"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="15,15,0,0" HorizontalOptions="Fill">
+                    <Image Source="account.png" 
+                           HeightRequest="{OnPlatform iOS=40, Android=39}"
+                           WidthRequest="{OnPlatform iOS=40, Android=34}" Margin="0,0,25,0" />
+                    <Label Text="Account" TextColor="White" FontSize="18" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="6,0,0,0" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AccountOpen"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="15,15,0,0" HorizontalOptions="Fill" IsVisible="False">
+                    <Image Source="feedback.png" 
+                           HeightRequest="{OnPlatform iOS=40, Android=35}"
+                           WidthRequest="{OnPlatform iOS=40, Android=40}" Margin="0,0,25,0"/>
+                    <Label Text="Feedback" TextColor="White" FontSize="18" VerticalTextAlignment="Center" VerticalOptions="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FeedbackOpen"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="15,15,0,0" HorizontalOptions="Fill">
+                    <Image Source="update.png" 
+                           HeightRequest="{OnPlatform iOS=40, Android=40}"
+                           WidthRequest="{OnPlatform iOS=40, Android=40}" Margin="0,0,25,0"/>
+                    <Label Text="Update" TextColor="White" FontSize="18" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="UpdateOpen"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="15,15,0,0" HorizontalOptions="Fill" IsVisible="False">
+                    <Image Source="time.png" 
+                           HeightRequest="{OnPlatform iOS=40, Android=40}"
+                           WidthRequest="{OnPlatform iOS=40, Android=40}" Margin="0,0,25,0"/>
+                    <Label Text="Time" TextColor="White" FontSize="18" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TimeOpen"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </Frame>
+</ContentPage>
